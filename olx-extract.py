@@ -61,7 +61,7 @@ for i, sec in enumerate(section_tuples):
 def choose():
     raw = raw_input("choose> ")
     try:
-        raw = map(lambda s: int(s), raw.split(", "))
+        raw = map(lambda s: int(s.strip()), raw.split(","))
     except Exception as e:
         print "invalid input: ", e
         return choose()
