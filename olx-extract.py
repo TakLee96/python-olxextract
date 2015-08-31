@@ -96,9 +96,8 @@ def recursive_copy(filename, section):
             recursive_copy(child[0], child[1])
 
 
-raw = sorted(raw, reverse=True)
 for i in raw:
-    section_tuple = section_tuples.pop(i)
+    section_tuple = section_tuples[i]
     recursive_copy(path.basename(section_tuple[0]), section)
 
 
